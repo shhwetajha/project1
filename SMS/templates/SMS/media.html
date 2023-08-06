@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method='POST' enctype="multipart/form-data">
+        {% csrf_token %}
+
+
+        <label>Enter the id</label>
+        <input type="text" name="eid">
+
+        <table border="2">
+            <tr>
+                <th>Name</th>
+                <td>{{stu.name}}</td>
+            </tr>
+            <tr>
+                <th>Age</th>
+                <td>{{stu.age}}</td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td>{{stu.address}}</td>
+            </tr>
+            <tr>
+                <th>pic</th>
+                <td><img src="{{stu.pic.url}}" alt="loading"></td>
+            </tr>
+            
+
+            
+
+
+
+        </table>
+
+
+    </form>
+</body>
+</html>

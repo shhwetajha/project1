@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+</head>
+<body style="background-color:yellow">
+    <form method="POST">
+        {% csrf_token %}
+        <h1>WELCOME {{user}}</h1>
+
+        <table border="2">
+            <tr>
+                <td>home</td><td><a href="{% url 'home' %}">Home</a></td>
+            </tr>
+            <tr>
+                <td>register</td><td><a href="{% url 'register' %}">register</a></td>
+            </tr>
+            <tr>
+                <td>LogIn</td><td><a href="{% url 'login' %}">LogIn</a></td>
+            </tr>
+            <tr>
+                <td>LogOut</td><td><a href="{% url 'logout' %}">LogOut</a></td>
+            </tr>
+            <tr>
+                <td>Secure1</td><td><a href="{% url 'secure1' %}">Secure1</a></td>
+            </tr>
+            <tr>
+                <td>Secure2</td><td><a href="{% url 'secure2' %}">Secure2</a></td>
+            </tr>
+            <tr>
+                <td>UnSecure1</td><td><a href="{% url 'unsecure1' %}">UnSecure1</a></td>
+            </tr>
+            <tr>
+                <td>UnSecure2</td><td><a href="{% url 'unsecure2' %}">UnSecure2</a></td>
+                
+            </tr>
+
+
+
+        </table>
+
+
+
+
+
+    </form>
+</body>
+</html>

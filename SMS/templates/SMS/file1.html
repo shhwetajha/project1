@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="{% static 'SMS/css/abc.css' %}" rel="stylesheet">
+    
+</head>
+
+<body style="background-color:pink" >
+
+  
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <p>Hello How Are You</p>
+
+        <h1>Hello</h1>
+   
+        <table>
+            {{forms}}
+
+
+        </table>
+        <button type="submit">submit</button>
+        <button onclick="func1()">Click me!!</button>
+
+
+<img src="{% static 'SMS/images/han.jpg'%}" alt="loading">
+<script src="{% static 'SMS/js/def.js'%}"></script>
+    </form>
+
+</body>
+</html>
